@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/* font{
+  font-family: 'Barlow', sans-serif;
+  font-family:; 'Fraunces', serif;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+html{
+  font-size: 112.5%;
+
+}
+
+:root{
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --Dark-blue : hsl(198, 62%, 26%);
+  --Dark-moderate-cyan: hsl(168, 34%, 41%);
+  
+  
+  
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body{
+  font-family:'Barlow', sans-serif ;
+}
+h1,h2,h3,h4,a{
+  font-family:'Fraunces', serif;
+}
+p{
+  font-family:'Barlow', sans-serif;
+  font-weight: 900;
+  font-size: large;
+} 
+
+header{
+  background-image: url(./images/desktop/image-header.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem;
+  color:var(--White);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin-bottom: 6rem; 
+}
+ 
+.header__nav{
+  display:flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.header__nav a{
+  color:inherit;
+  text-decoration: none;
+  font-family:'Barlow', sans-serif;
+}
+
+.header__nav .contact-link{
+  color: black;
+  background-color:white;
+  padding: 0.8em;
+  border-radius: 100vmax;
+}
+ .contact-link:hover{
+  background-color: var(--Grayish-blue);
+  color:var(--White);
+ }
+
+.cotact-link a{
+  font-family:'Fraunces', serif ;
+}
+
+header h1{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 2.8em;
+  font-weight: 900;
+}
+
+.arrow-down{
+  position:absolute;
+  left:50%;
+  /* animation-name: bounce;
+   animation-duration: 4s; */
+   animation: bounce 3s infinite;
+} 
+
+.middle{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.tip{
+  text-align: center;
+  text-align: left;
+  margin-block: 11rem;
+  margin-inline: 6rem;
+}
+.tip h3{
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+
+.tip p{
+  padding-bottom: 7px;
+  color:grey;
+}
+
+.tip h4{
+  text-decoration: underline;
+  text-decoration-color: var(--Yellow);
+  text-decoration-thickness: 5px;
+}
+
+ .tip .more{
+  text-decoration: underline;
+  text-decoration-color:var(--Soft-red);
+  text-decoration-thickness: 5px;
+}
+
+.pip{
+  position: relative;
+}
+
+.pip-text{
+  position: absolute;
+  top: 60%;
+   padding: 50px; 
+  padding-left: 150px;
+  text-align: center;
+}
+
+.pip-text h3{
+  padding-bottom: 5%;
+}
+
+.test{
+margin-top: 5rem;
+margin-inline: 30.5rem;
+font-weight: 600;
+font-size: x-large;
+font-family: 'Barlow', sans-serif;
+color: gray;
+}
+
+.client{
+  display: flex;
+  padding-top: 100px;
+  padding-inline: 120px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.client .image{
+  border-radius: 40px;
+  max-width: 20%;
+}
+
+.client p{
+  color: gray;
+  padding-block: 35px;
+}
+
+.gallery{
+  display: flex;
+  max-width:25%;
+  margin-top: 50px;
+}
+
+footer{
+  background-color: hsl(168, 34%, 41%) ;
+  align-items: center;
+  padding-block: 60px;
+}
+
+.closing{
+display: flex;
+justify-content: space-evenly;
+margin-right: 37rem;
+
+}
+
+@keyframes bounce {
+0%{
+  opacity: 0;
+  transform: translate( -50%,20%);
+}
+100%{
+  opacity: 1;
+  transform: translate(-50%,50%);
+}
+}
+
+.menu-btn{
+  display: none; 
+}
+
+@media (max-width:678px){
+  
+  nav{
+    position: relative;
+  }
+  .header__nav{
+     display:block; 
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+    position: absolute;
+    top: 5rem;
+    color: var(--Grayish-blue);
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+    
+  }
+  .menu-btn{
+    display: block;
+  }
+
+  .header__nav li{
+margin-bottom: 1rem;
+  }
+
+  .header__nav .contact-link{
+    background-color: var(--Yellow);
+    padding-inline: 0;
+  }
+
+  .middle{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+  .pip-text{
+    
+    padding: 20px; 
+    padding-left:90px;
+    text-align: center;
+  }
+  .test{
+    margin-inline: 13rem;
+  }
+.client{
+  display: grid;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width:100%;
+  
+}
+
+}
